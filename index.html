@@ -105,15 +105,16 @@
                                     <label class="form-label comment-label" for="comment">Комментарий</label>
                                 </div>
                                 <div class="form-field form-polisy">
-                                    <input type="checkbox"
+                                    <input class="polisy-checkbox visually-hidden"
+                                    type="checkbox"
                                     name="polisy"
                                     id="polisy"
                                     placeholder=" ">
-                                    <label for="polisy">Соглашаюсь с рассылкой и принимаю
-                                        <a href="">Условия договора</a>
+                                    <label class="polisy-label" for="polisy">Соглашаюсь с рассылкой и принимаю
+                                        <a class="polisy-link" href="">Условия договора</a>
                                     </label>
                                 </div>
-                                <button type="submit">Отправить</button>
+                                <button class="open-button" type="submit">Отправить</button>
                             </form>
                           </div>
                     </div>
@@ -450,10 +451,41 @@
                         </li>
                     </ul>
                 </div>
+                <div class="subscribe">
+                    <p><b>Подпишитесь на рассылку</b></p>
+                    <div class="subscribe-form">
+                        <input class="subscribe-input"
+                            type="email"
+                            placeholder="E-mail"
+                            name="customer-mail">
+                        <button class="open-button subscribe-button" type="submit">
+                            <span>Подписаться</span>
+                            <svg class="subscribe-icon">
+                                <use href="./image/sprite.svg#icon-telegram-form"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
             <p class="footer-text container">2020 | Developed by GoIT Students</p>
         </footer>
 
         <script src="./js/modal.js"></script>
+        <!--
+            <script>
+            (() => {
+              document.querySelector('.js-form').addEventListener('submit', e => {
+                e.preventDefault();
+      
+                console.log('');
+                console.count('Submit #');
+      
+                new FormData(e.currentTarget).forEach((value, name) =>
+                  console.log(name, ':', value),
+                );
+              });
+            })();
+          </script>
+        -->
     </body>
 </html>
