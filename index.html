@@ -53,7 +53,70 @@
             <section class="hero">
                <div class="hero-container">
                     <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</h1> 
-                    <a class="button" href="">Заказать услугу</a>
+                    <button class="open-button" data-modal-open>Заказать услугу</button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal-form">
+                            <button class="close-button" data-modal-close>
+                                <svg class="close-icon" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"/>
+                                </svg>                                        
+                            </button>
+                            <form class="form" action="" autocomplete="off">
+                                <h1 class="form-title">Оставьте свои данные, мы вам перезвоним</h1>
+                                <div class="form-field">
+                                    <input type="text" 
+                                        class="form-input" 
+                                        placeholder=" "
+                                        name="customer-name"
+                                        id="customer-name">
+                                    <label for="customer-name" class="form-label">Имя</label>
+                                    <svg class="icon">
+                                            <use href="./image/sprite.svg#icon-person-form"></use>
+                                    </svg>
+                                </div>
+                                <div class="form-field">
+                                    <input type="tel" 
+                                        class="form-input" 
+                                        placeholder=" "
+                                        name="tel"
+                                        id="tel">
+                                    <label for="tel" class="form-label">Телефон</label>
+                                    <svg class="icon">
+                                        <use href="./image/sprite.svg#icon-phone-form"></use>
+                                    </svg>
+                                </div>
+                                <div class="form-field">
+                                    <input type="email" 
+                                        class="form-input" 
+                                        placeholder=" "
+                                        name="mail"
+                                        id="mail">
+                                    <label for="mail" class="form-label">Почта</label>
+                                    <svg class="icon">
+                                        <use href="./image/sprite.svg#icon-email-form"></use>
+                                    </svg>
+                                </div>
+                                <div class="form-field comment">                                 
+                                    <textarea class="form-input form-comment" 
+                                        name="comment"
+                                        id="comment"
+                                        rows="10"
+                                        placeholder=" "></textarea>
+                                    <label class="form-label comment-label" for="comment">Комментарий</label>
+                                </div>
+                                <div class="form-field form-polisy">
+                                    <input type="checkbox"
+                                    name="polisy"
+                                    id="polisy"
+                                    placeholder=" ">
+                                    <label for="polisy">Соглашаюсь с рассылкой и принимаю
+                                        <a href="">Условия договора</a>
+                                    </label>
+                                </div>
+                                <button type="submit">Отправить</button>
+                            </form>
+                          </div>
+                    </div>
                </div>
             </section>
 
@@ -390,5 +453,7 @@
             </div>
             <p class="footer-text container">2020 | Developed by GoIT Students</p>
         </footer>
+
+        <script src="./js/modal.js"></script>
     </body>
 </html>
